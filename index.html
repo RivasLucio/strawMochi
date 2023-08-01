@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="icon" href="./img/icono.png">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cookie&family=Libre+Baskerville&family=Permanent+Marker&family=Roboto:ital@1&display=swap"
+        rel="stylesheet" />
+    <title>Strawmochi</title>
+    <script defer src="./js/almacen.json"></script>
+    <script defer src="./js/darkmode.js"></script>
+    <script defer src="./js/main.js"></script>
+</head>
+
+<body>
+    <header>
+
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="./img/logo.png" alt="" />
+            </div>
+            <div class="nav-categorias">
+                <ul>
+                    <a href="#">
+                        <li>Inicio</li>
+                    </a>
+                    <a href="#entrada">
+                        <li>Entrada</li>
+                    </a>
+                    <a href="#principal">
+                        <li>Plato Principal</li>
+                    </a>
+                    <a href="#bebidas">
+                        <li>Bebidas</li>
+                    </a>
+                    <a href="#postres">
+                        <li>Postres</li>
+                    </a>
+                </ul>
+            </div>
+            <div class="nav-redes">
+                <a href=""><i class="bi bi-instagram"></i></a>
+                <a href=""> <i class="bi bi-facebook"></i></a>
+            </div>
+
+            <div class="nav-menu">
+                <a href="" id="btnMenu">
+                    <i id="menu" class="bi bi-grid-fill "></i>
+                    <i id="menuClose" class="bi bi-x-lg menuClose disabled"></i>
+                </a>
+            </div>
+            <div class="nav-menu-background">
+            </div>
+
+            <div class="carrito">
+                <div class="carrito-nav">
+                    <a id="botonCarrito" href=""><i class="bi bi-basket2"></i></a>
+                    <span id="carrito-contador" class="carrito-contador">0</span>
+                </div>
+                <div class="carrito-container">
+                    <div class="carrito-vacio">
+                        <p>el carrito se encuentra vacio</p>
+                        <p>por favor agregue productos.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-modoOscuro">
+                <a id="botonDarkMode" href="#"> <i class="bi bi-moon-stars"></i></a>
+                <a id="botonLightMode" class="disabled" href="#"> <i class="bi bi-sun"></i></a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section id="" class="sect">
+            <div class="presentacion-container">
+                <div class="presentacion-texto">
+                    <h2>
+                        Sumérgete en una Exquisita <img src="./img/logo2.png" />Aventura
+                        Asiática
+                    </h2>
+                    <p>
+                        Descubre una explosión de sabores y aromas que te transportarán al
+                        corazón de Asia. Explora una amplia variedad de platos
+                        tradicionales en donde con cada bocado, te transportarás a los
+                        callejones animados de Tokio, a los mercados bulliciosos de
+                        Bangkok y los templos sagrados de Kioto.
+                    </p>
+                    <a href="#">Ordenar Ahora <i class="bi bi-chevron-double-right"></i></a>
+                </div>
+                <div class="presentacion-img">
+                    <img src="./img/sushi-inicio.png" alt="" />
+                </div>
+            </div>
+            <div class="presentacion-seccionContainer">
+                <div class="presentacion-seccion">
+                    <div class="presentacion-seccionImg">
+                        <img src="./img/ramen-inicio.png" alt="" />
+                    </div>
+                    <div class="presentacion-seccionTexto">
+                        <h1>Sobre Nosotros</h1>
+                        <h3>Comida auténtica y saludable</h3>
+                        <p>
+                            Trazamos un puente entre culturas culinarias para llevarte una
+                            experiencia sabrosa y saludable. Nuestros platos fusionan los
+                            auténticos sabores de Japón y China, con ingredientes frescos y
+                            saludables. Sumérgete en una aventura gastronómica única y
+                            deliciosa.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="modal-container disabled">
+            <div class="modal-content">
+                <h2>Completa los siguientes datos</h2>
+                <form class="form">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" required>
+                    <label for="apellido">Apellido:</label>
+                    <input type="text" id="apellido" required>
+                    <label for="email">Correo electronico:</label>
+                    <input type="email" id="email" required>
+                    <label for="tel">Teléfono:</label>
+                    <input type="tel" id="tel" pattern="[0-9]+" required>
+                    <button id="finalizar-pedido">Realizar pedido!</button>
+                </form>
+            </div>
+        </div>
+        <section class="sect" id="entrada">
+            <div class="presentacion-seccionContainer comida">
+                <h1>Entradas</h1>
+                <div id="card-container-entradas" class="card-container">
+                </div>
+            </div>
+        </section>
+        <section class="sect" id="principal">
+            <div class="presentacion-seccionContainer comida">
+                <h1>Platos Principales</h1>
+                <img class="ramen-absolute" src="./img/ramen-absolute.svg" alt="" />
+                <div id="card-container-principales" class="card-container">
+                    <img class="sushi-absolute" src="./img/sushi-absolute.svg" alt="" />
+                </div>
+            </div>
+        </section>
+        <section class="sect" id="bebidas">
+            <div class="presentacion-seccionContainer comida">
+                <h1>Bebidas</h1>
+                <div class="bebidas-container">
+                    <img src="./img/bebida-coca.png" alt="" />
+                    <img src="./img/bebida-limonada.png" alt="" />
+                    <img src="./img/bebida-cerveza.png" alt="" />
+                    <img src="./img/bebida-agua.png" alt="" />
+                    <img src="./img/bebida-naranja.png" alt="" />
+                </div>
+            </div>
+        </section>
+        <section class="sect" id="postres">
+            <div class="presentacion-seccionContainer comida">
+                <h1>Postres</h1>
+                <h3>( todos los postres se sirven con un te de matcha si se quiere )</h3>
+                <div id="card-container-postres" class="card-container">
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-duo">
+                <div class="footer-card">
+                    <h2>
+                        <li>Navegador</li>
+                    </h2>
+                    <a href="">
+                        <li>Inicio</li>
+                    </a>
+                    <a href="">
+                        <li>Entrada</li>
+                    </a>
+                    <a href="">
+                        <li>Plato Principal</li>
+                    </a>
+                    <a href="">
+                        <li>Bebidas</li>
+                    </a>
+                    <a href="">
+                        <li>Postres</li>
+                    </a>
+                    </ul>
+                </div>
+                <div class="footer-card">
+                    <ul>
+                        <h2>
+                            <li>Informacion</li>
+                        </h2>
+                        <a href="">
+                            <li>Contactanos<i class="bi bi-whatsapp"></i></li>
+                        </a>
+                        <a href="">
+                            <li>Ordenes y Turnos</li>
+                        </a>
+                        <a href="">
+                            <li>Reservar</li>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-duo">
+                <div class="footer-card">
+                    <ul>
+                        <h2>
+                            <li>Encuentranos</li>
+                        </h2>
+                        <a href="">
+                            <li>North 25th Ave
+                                Phoenix<i class="bi bi-geo-alt-fill"></i></li>
+                        </a>
+
+                        <li>11am - 00 pm</li>
+                    </ul>
+                </div>
+                <div class="footer-card footer-redes">
+                    <h2>
+                        <li>Redes sociales</li>
+                    </h2>
+                    <ul>
+                        <a href="">
+                            <li><i class="bi bi-instagram"></i></li>
+                        </a>
+                        <a href="">
+                            <li><i class="bi bi-facebook"></i></li>
+                        </a>
+                        <a href="">
+                            <li><i class="bi bi-twitter"></i></li>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- scroll up -->
+
+    <a href="#" class="scroll-up" id="scroll-up">
+        <i class="bi bi-arrow-up"></i>
+    </a>
+    <script src="./js/unpkg.com_scrollreveal@4.0.9_dist_scrollreveal.js"></script>
+</body>
+
+</html>

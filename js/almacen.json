@@ -1,0 +1,200 @@
+[
+  {
+    "id": "entradas-01",
+    "nombre": "Onigiri de atún mayo",
+    "img": "../img/onigiri-01.png",
+    "precio": "$1500",
+    "descripcion": "Cuenta con una mezcla de atún fresco y mayonesa como relleno. Esta combinación crea una textura cremosa y un sabor delicioso.",
+    "categoria": {
+      "nombre": "entrada",
+      "id": "entrada"
+    }
+  },
+  {
+    "id": "entradas-02",
+    "nombre": "Onigiri de salmón",
+    "img": "../img/onigiri-02.png",
+    "precio": "$1500",
+    "descripcion": "Un clásico y popular sabor de onigiri, que combina el arroz blanco sazonado con salmón fresco y cocido.",
+    "categoria": {
+      "nombre": "entrada",
+      "id": "entrada"
+    }
+  },
+  {
+    "id": "entradas-03",
+    "nombre": "Onigiri de umeboshi",
+    "img": "../img/onigiri-03.png",
+    "precio": "$1500",
+    "descripcion": "El umeboshi es una ciruela encurtida y salada.Presenta un relleno de esta ciruela, que le brinda un sabor ácido, salado e intenso al arroz.",
+    "categoria": {
+      "nombre": "entrada",
+      "id": "entrada"
+    }
+  },
+  {
+    "id": "entradas-04",
+    "nombre": "Dumplings de cerdo al vapor",
+    "img": "../img/dumpling-01.png",
+    "precio": "$1600",
+    "descripcion": "rellenos de carne de cerdo picada sazonada con especias, jengibre y otros condimentos. Cocinados al vapor, lo que los hace jugosos y tiernos.",
+    "categoria": {
+      "nombre": "entrada",
+      "id": "entrada"
+    }
+  },
+  {
+    "id": "entradas-05",
+    "nombre": "Dumplings de pollo al estilo Sichuan",
+    "img": "../img/dumpling-02.png",
+    "precio": "$1600",
+    "descripcion": "Originarios de la región de Sichuan en China, estos dumplings presentan un relleno de pollo finamente picado, ajo, salsa de soja y chile picante.",
+    "categoria": {
+      "nombre": "entrada",
+      "id": "entrada"
+    }
+  },
+  {
+    "id": "entradas-06",
+    "nombre": "Dumplings de verduras",
+    "img": "../img/dumpling-03.png",
+    "precio": "$1600",
+    "descripcion": "Pueden incluir una combinación de espinacas, zanahorias, champiñones, repollo, jengibre y condimentos diversos.",
+    "categoria": {
+      "nombre": "entrada",
+      "id": "entrada"
+    }
+  },
+  {
+    "id": "principal-01",
+    "nombre": "Miso Ramen",
+    "img": "../img/ramen-01.png",
+    "precio": "$4200",
+    "descripcion": "Caldo salado y dulce hecho con pasta de miso fermentado. Fideos rizados o lisos, con carne de cerdo, verduras salteadas, brotes de soja y maíz.",
+    "categoria": {
+      "nombre": "principal",
+      "id": "principal"
+    }
+  },
+  {
+    "id": "principal-02",
+    "nombre": "Shoyu Ramen",
+    "img": "../img/ramen-02.png",
+    "precio": "$4200",
+    "descripcion": "Caldo de tonalidad marrón claro hecho con salsa de soja. Acompañado de fideos rizados, carne de cerdo, brotes de bambú, cebollinos y huevo marinado.",
+    "categoria": {
+      "nombre": "principal",
+      "id": "principal"
+    }
+  },
+  {
+    "id": "principal-03",
+    "nombre": "Tonkotsu Ramen",
+    "img": "../img/ramen-03.png",
+    "precio": "$4200",
+    "descripcion": "Caldo rico y cremoso hecho con huesos de cerdo cocidos a fuego lento. Fideos finos y suaves, con cerdo, cebollinos, brotes de soja y huevo marinado.",
+    "categoria": {
+      "nombre": "principal",
+      "id": "principal"
+    }
+  },
+  {
+    "id": "principal-04",
+    "nombre": "Nigiri Sushi",
+    "img": "../img/sushi-01.png",
+    "precio": "$1600",
+    "descripcion": "Porción de arroz de sushi moldeado cubierto con lonjas de pescado fresco, como salmón y atún. Contiene 5 piezas.",
+    "categoria": {
+      "nombre": "principal",
+      "id": "principal"
+    }
+  },
+  {
+    "id": "principal-05",
+    "nombre": "Maki Sushi",
+    "img": "../img/sushi-02.png",
+    "precio": "$1600",
+    "descripcion": "Rollo de sushi con capa de arroz cubierta de alga nori y relleno de ingredientes como aguacate, pepino, salmón, atún, pepinillos encurtidos o queso crema. Contiene 5 piezas.",
+    "categoria": {
+      "nombre": "principal",
+      "id": "principal"
+    }
+  },
+  {
+    "id": "principal-06",
+    "nombre": "Spicy Tuna Roll",
+    "img": "../img/sushi-03.png",
+    "precio": "$1600",
+    "descripcion": "Un rollo de sushi con atún picante mezclado con salsa picante, envuelto en arroz de sushi y alga nori. Contiene 5 piezas.",
+    "categoria": {
+      "nombre": "principal",
+      "id": "principal"
+    }
+  },
+  {
+    "id": "postre-01",
+    "nombre": "Straw Mochi",
+    "img": "../img/postre-01.png",
+    "precio": "$1300",
+    "descripcion": "Es una variante moderna de mochi, a diferencia del mochi tradicional, el Straw Mochi incorpora un relleno líquido en su interior. Contiene 3 mochis.",
+    "categoria": {
+      "nombre": "postre",
+      "id": "postre"
+    }
+  },
+  {
+    "id": "postre-02",
+    "nombre": "Mochi",
+    "img": "../img/postre-02.png",
+    "precio": "$1200",
+    "descripcion": "Es un pastel de arroz glutinoso y suave, generalmente relleno de pasta de frijol dulce llamada anko. Contiene 3 mochis",
+    "categoria": {
+      "nombre": "postre",
+      "id": "postre"
+    }
+  },
+  {
+    "id": "postre-03",
+    "nombre": "Mochi simple",
+    "img": "../img/postre-03.png",
+    "precio": "$1200",
+    "descripcion": "La clásica masa de mochi sin relleno unida por un palo. Contiene 3 mochis.",
+    "categoria": {
+      "nombre": "postre",
+      "id": "postre"
+    }
+  },
+  {
+    "id": "postre-04",
+    "nombre": "Wagashi",
+    "img": "../img/postre-04.png",
+    "precio": "$900",
+    "descripcion": "Se trata de una amplia variedad de dulces tradicionales japoneses que incluyen formas y sabores diversos.",
+    "categoria": {
+      "nombre": "postre",
+      "id": "postre"
+    }
+  },
+  {
+    "id": "postre-05",
+    "nombre": "Dorayaki",
+    "img": "../img/postre-05.png",
+    "precio": "$900",
+    "descripcion": "Son panqueques japoneses redondos y esponjosos que se rellenan con anko. Contiene 2 unidades.",
+    "categoria": {
+      "nombre": "postre",
+      "id": "postre"
+    }
+  },
+  {
+    "id": "postre-06",
+    "nombre": "Mooncake",
+    "img": "../img/postre-06.png",
+    "precio": "$3200",
+    "descripcion": "Pastel que se disfruta durante el Festival del Medio Otoño en China. Está relleno de una variedad de ingredientes, como pasta de frijol dulce y nueces.",
+    "categoria": {
+      "nombre": "postre",
+      "id": "postre"
+    }
+  }
+]

@@ -1,0 +1,985 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --clr-body: #fadac6;
+  --clr-body-darkmode: #121212;
+  --box-shadow: 0px 3px 4px rgba(252, 200, 167, 0.5);
+  --box-shadow-darkmode: 0px 3px 4px rgba(51, 48, 46, 0.5);
+  --box-shadow-sect: 0px 7px 5px rgba(252, 187, 146, 0.5);
+  --box-shadow-sect-dark: 0px 3px 4px rgba(36, 34, 33, 0.712);
+
+  --clr-txt-titulo-sect: #ff9552;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background: var(--clr-body);
+  font-family: "Permanent Marker", cursive;
+  font-weight: 500;
+  overflow-x: hidden !important;
+  width: 100vw;
+  transition: ease-in-out 0.5s;
+}
+
+li {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+.nav-container {
+  height: 7vw;
+  box-shadow: var(--box-shadow);
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.1vw;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: var(--clr-body);
+  z-index: 999;
+  transition: ease-in-out 0.4s;
+}
+
+.nav-logo {
+  height: 100%;
+}
+.nav-menu,
+.nav-menu-background {
+  display: none;
+}
+
+.nav-logo img {
+  width: 100%;
+  height: 100%;
+  transform: scale(0.9);
+  transition: 0.8s ease;
+}
+.nav-logo img:hover {
+  transform: scale(1);
+}
+.nav-categorias ul {
+  display: flex;
+  gap: 30px;
+}
+.carrito {
+  font-size: 1.5vw;
+  font-family: "Roboto", sans-serif;
+}
+.solicitar-pedido {
+  cursor: pointer;
+}
+
+.nav-categorias a {
+  position: relative;
+}
+
+.nav-categorias a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 0;
+  height: 1.5px;
+  background: #000;
+  transition: width 0.4s ease;
+}
+.nav-categorias a:hover::after {
+  width: 100%;
+}
+
+.nav-redes {
+  display: flex;
+  gap: 20px;
+}
+.nav-categorias,
+.nav-redes,
+.nav-modoOscuro {
+  padding: 20px;
+}
+
+.presentacion-container {
+  display: flex;
+  width: 80%;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 12vw;
+  margin-bottom: 12vw;
+}
+
+.presentacion-texto h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 4vw;
+  width: 80%;
+}
+.presentacion-texto p {
+  color: rgb(173, 117, 84);
+  font-family: "Roboto", sans-serif;
+  font-size: 1vw;
+  font-weight: 500;
+  width: 90%;
+  margin-top: 1.5vw;
+}
+.presentacion-texto img {
+  width: 12%;
+  position: relative;
+  top: 1vw;
+}
+.presentacion-texto a {
+  position: relative;
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+  top: 1vw;
+  background: #ff9552;
+  font-size: 1.5vw;
+  padding: 0.5vw;
+  border-radius: 10vw;
+  color: white;
+}
+.presentacion-texto a i {
+  position: relative;
+  top: 0.1vw;
+}
+.presentacion-img img {
+  width: 35vw;
+  transform: translateX(0px);
+  animation: float 5s ease-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-30px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+.presentacion-seccionContainer h1 {
+  text-align: center;
+  font-size: 3vw;
+  color: var(--clr-txt-titulo-sect);
+  font-family: "Cookie", cursive;
+  font-weight: 500;
+  position: relative;
+  right: 12vw;
+}
+
+.presentacion-seccion {
+  display: flex;
+  width: 60%;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: 50px;
+  padding-bottom: 5vw;
+}
+
+.presentacion-seccionTexto h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 2vw;
+  width: 70%;
+  font-weight: 600;
+}
+.presentacion-seccionTexto p {
+  color: rgb(173, 117, 84);
+  font-family: "Roboto", sans-serif;
+  font-size: 1vw;
+  font-weight: 500;
+  width: 70%;
+}
+.presentacion-seccionImg img {
+  width: 25vw;
+  margin-right: 5vw;
+}
+
+.comida {
+  margin-top: 2vw;
+}
+.comida h1 {
+  position: inherit;
+  font-weight: 500;
+  font-size: 3vw;
+}
+
+.sect {
+  box-shadow: var(--box-shadow-sect);
+}
+
+.card-container {
+  display: flex;
+  width: 80vw;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  gap: 2vw;
+  margin-top: 3vw;
+  flex-wrap: wrap;
+  padding-bottom: 5vw;
+}
+.card {
+  background: #ffe2cfde;
+  width: 19vw;
+  height: 22vw;
+  border-radius: 1vw;
+  box-shadow: 3px 3px 0px rgba(252, 200, 167, 0.5);
+}
+
+.card:hover img {
+  transform: scale(1.05);
+  top: -3vw;
+}
+.card-img {
+  width: 13vw;
+  height: 8vw;
+  margin: auto;
+}
+.card img {
+  width: 100%;
+  position: relative;
+  top: -2.5vw;
+  transition: 0.6s ease;
+}
+.card-precio {
+  margin-top: 5vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-size: 0.9vw;
+  font-family: "Roboto", sans-serif;
+}
+.card-precio a i {
+  color: white;
+  background: #ff9552;
+  font-size: 0.8vw;
+  padding: 0.4vw;
+  border-radius: 50%;
+  position: relative;
+  left: 3vw;
+}
+
+.card-texto {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8vw;
+  margin-top: 10px;
+  height: 5vw;
+  margin-bottom: 2vw;
+  position: relative;
+  top: -2vw;
+}
+.card-texto h4 {
+  font-size: 1.1vw;
+  font-weight: 500;
+}
+.card-texto p {
+  color: rgb(173, 117, 84);
+  font-family: "Roboto", sans-serif;
+  font-size: 0.8vw;
+}
+.onigiri-meme {
+  width: 19vw;
+  position: absolute;
+  right: -2vw;
+  margin-bottom: 10vw;
+}
+
+.sushi-absolute {
+  width: 16vw;
+  position: absolute;
+  right: -2vw;
+  margin-top: 20vw;
+}
+.ramen-absolute {
+  width: 16vw;
+  position: absolute;
+  margin-top: 5vw;
+}
+
+.bebidas-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 50vw;
+  margin: auto;
+}
+
+.bebidas-container img {
+  width: 15vw;
+}
+
+.comida h3 {
+  font-family: "Roboto", sans-serif;
+  color: #ff9552;
+  font-weight: 400;
+  opacity: 0.6;
+  text-align: center;
+}
+
+.footer-container {
+  height: 15vw;
+  background: rgb(250, 218, 198);
+  background: linear-gradient(
+    180deg,
+    rgba(250, 218, 198, 1) 0%,
+    rgba(255, 205, 175, 1) 52%,
+    rgba(255, 198, 163, 1) 99%
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8vw;
+  font-family: "Roboto", sans-serif;
+}
+.footer-container h2 {
+  font-size: 1.3vw;
+  margin-bottom: 0.5vw;
+}
+.footer-container a,
+.footer-container li {
+  font-size: 1vw;
+}
+
+.footer-redes ul {
+  display: flex;
+  flex-direction: row;
+  gap: 1vw;
+}
+.footer-duo {
+  display: flex;
+  gap: 10vw;
+  height: 60%;
+}
+
+
+.disabled {
+  display: none;
+}
+
+.carrito-container {
+  position: absolute;
+  right: 14vw;
+  top: 5vw;
+  border-radius: 0.8vw;
+  border-top-right-radius: 0.1vw;
+  background-color: #f7c9acda;
+  border: 0.9px solid black;
+  width: 25%;
+  font-size: 1vw;
+  padding: 5px;
+}
+
+.carrito-producto {
+  display: flex;
+  align-items: center;
+}
+
+.carrito-producto img {
+  margin-right: 10px;
+  margin-left: 5px;
+}
+
+.carrito-producto i {
+  margin-left: auto;
+}
+
+.carrito-vacio {
+  text-align: center;
+  font-size: 1.1vw;
+}
+.carrito-nav {
+  display: flex;
+  gap: 5px;
+}
+.carrito-contador {
+  width: 1.5vw;
+  height: 1.5vw;
+  background: wheat;
+  border-radius: 50%;
+  font-size: 1vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carrito-producto {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-bottom: 0.5px solid #02020260;
+}
+.carrito-producto img {
+  width: 4.5vw;
+}
+.carrito-producto i {
+  font-size: 1.5vw;
+  cursor: pointer;
+}
+
+.carrito-precio {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10px;
+  padding-bottom: 5px;
+}
+
+.modal-container {
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 3vw;
+  border: 1px solid #888;
+  width: 50%;
+  height: 40%;
+  text-align: center;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5%;
+}
+
+.form button {
+  margin-top: 1.5vw;
+}
+
+/* scroll bar */
+
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: rgba(255, 200, 165, 0.5);
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgba(247, 173, 127, 0.712);
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(247, 173, 127);
+  border-radius: 5px;
+}
+
+/* scroll up */
+.scroll-up {
+  position: fixed;
+  right: 1rem;
+  bottom: -50%;
+  font-size: 1.2vw;
+  transition: ease-in-out 0.6s;
+}
+.scroll-up:hover {
+  transform: translateY(-0.7rem);
+}
+.show-scroll {
+  bottom: 3rem;
+}
+
+.darkMode {
+  background: var(--clr-body-darkmode);
+  transition: 0.5s;
+}
+body.darkMode .nav-container {
+  background: var(--clr-body-darkmode);
+  box-shadow: var(--box-shadow-darkmode);
+}
+
+body.darkMode a,
+body.darkMode .presentacion-texto h2,
+body.darkMode .footer-container li {
+  color: #fff0d5ec;
+}
+
+body.darkMode .presentacion-texto p,
+body.darkMode .presentacion-seccionTexto p,
+body.darkMode .card-texto p {
+  color: rgba(247, 212, 190, 0.7);
+}
+body.darkMode .presentacion-texto a {
+  background: #ff9452dc;
+}
+body.darkMode .presentacion-seccionTexto h3,
+body.darkMode .comida h3 {
+  color: rgba(229, 186, 160, 0.911);
+}
+body.darkMode .presentacion-seccionTexto h1,
+body.darkMode .presentacion-seccionContainer h1,
+body.darkMode .card-texto h4 {
+  color: #ffb181e8;
+}
+body.darkMode .sect {
+  box-shadow: var(--box-shadow-sect-dark);
+}
+body.darkMode .card {
+  background: hsl(30, 7%, 11%);
+  box-shadow: 3px 3px 0px hsl(19, 10%, 10%);
+}
+body.darkMode .footer-container {
+  background: rgb(18, 18, 18);
+  background: linear-gradient(
+    180deg,
+    rgba(18, 18, 18, 1) 0%,
+    rgba(14, 14, 14, 1) 43%,
+    rgba(0, 0, 0, 1) 100%
+  );
+}
+/* menu responsive */
+
+
+
+/* query */
+@media (max-width: 1800px) {
+  .presentacion-container {
+    margin-top: 15vw;
+    margin-bottom: 15vw;
+  }
+  .presentacion-img img {
+    width: 40vw;
+  }
+  .sushi-absolute {
+    right: -10vw;
+  }
+}
+
+@media (max-width: 1200px) {
+  .presentacion-container {
+    margin-top: 17vw;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  .presentacion-img img {
+    width: 45vw;
+  }
+  .presentacion-texto p {
+    font-size: 1.3vw;
+    width: 100%;
+  }
+
+  .presentacion-seccionImg img {
+    width: 25vw;
+  }
+  .presentacion-seccion {
+    width: 80%;
+    margin: auto;
+  }
+  .presentacion-seccionTexto p {
+    font-size: 1.3vw;
+
+    width: 80%;
+  }
+  .card-container {
+    width: 90%;
+    gap: 1.5vw;
+  }
+
+  .card {
+    width: 24vw;
+    height: 26vw;
+  }
+  .card-img {
+    width: 15vw;
+    height: 10vw;
+  }
+  .card-texto {
+    width: 85%;
+  }
+  .card-texto h4 {
+    font-size: 1.5vw;
+  }
+  .card-texto p {
+    font-size: 1.3vw;
+  }
+  .card-precio {
+    margin-top: 7.3vw;
+    font-size: 1.3vw;
+  }
+  .card-precio a i {
+    font-size: 1vw;
+  }
+
+  .sushi-absolute {
+    right: -5vw;
+    width: 14vw;
+    z-index: -5;
+  }
+  .ramen-absolute {
+    width: 14vw;
+  }
+  .footer-container a,
+  .footer-container li {
+    font-size: 1.5vw;
+  }
+}
+
+@media (max-width: 700px) {
+  .nav-container {
+    height: 8vw;
+    font-size: 1.6vw;
+  }
+  .nav-categorias,
+  .nav-redes,
+  .nav-modoOscuro {
+    padding: 10px;
+  }
+  .nav-categorias {
+    padding: 15px;
+  }
+  .nav-categorias ul {
+    gap: 15px;
+  }
+  .presentacion-texto h2 {
+    font-size: 2.8vw;
+  }
+  .presentacion-texto p {
+    font-size: 1.5vw;
+  }
+  .presentacion-texto img {
+    width: 18%;
+    top: 1.5vw;
+  }
+  .presentacion-texto a {
+    padding: 1.2vw;
+    font-size: 1.5vw;
+  }
+
+  .presentacion-seccionTexto h3 {
+    font-size: 2vw;
+  }
+
+  .presentacion-seccionContainer h1 {
+    font-size: 4vw;
+  }
+  .presentacion-seccionTexto p {
+    width: 80%;
+    font-size: 1.5vw;
+  }
+
+  .card-container {
+    width: 90vw;
+  }
+  .card {
+    width: 28vw;
+    height: 35vw;
+  }
+  .comida h3 {
+    font-size: 2vw;
+  }
+  .card-precio a i {
+    font-size: 1.5vw;
+  }
+  .card-img {
+    width: 16vw;
+    height: 9vw;
+  }
+  .card-texto {
+    width: 85%;
+    height: 10vw;
+    top: 0vw;
+  }
+  .card-texto h4 {
+    font-size: 1.8vw;
+  }
+  .card-texto p {
+    font-size: 1.5vw;
+  }
+  .card-precio {
+    margin-top: 11vw;
+  }
+  .onigiri-meme {
+    width: 30vw;
+    right: -6vw;
+    margin-bottom: 8vw;
+  }
+  .ramen-absolute {
+    width: 18vw;
+    left: -3.5vw;
+    margin-top: -8vw;
+  }
+  .sushi-absolute {
+    width: 17vw;
+    margin-top: 75vw;
+  }
+
+  .footer-container a,
+  .footer-container li {
+    font-size: 1.9vw;
+  }
+}
+
+@media (max-width: 500px) {
+  /* menu navbar */
+  .nav-menu,
+  .nav-menu-background {
+    display: block;
+    z-index: 200;
+  }
+  .nav-menu a i {
+    z-index: 999;
+  }
+
+  .nav-categorias ul {
+    flex-direction: column;
+    position: absolute;
+    top: -70vw;
+    z-index: 5;
+    gap: 5vw;
+    transition: all 0.6s ease;
+  }
+  .nav-categorias.active ul {
+    top: 30vw;
+  }
+  .nav-categorias ul li
+  {
+    color: #fff;
+  }
+  .menuClose {
+    font-size: 4vw;
+    color: #fffefe;
+  }
+  .nav-menu-background {
+    background: #121212;
+    width: 100vw;
+    height: 0;
+    position: absolute;
+    right: 0vw;
+    top: 0vw;
+    z-index: -1;
+    overflow: hidden;
+    transition: all 0.6s ease;
+  }
+  body.darkMode .nav-menu-background {
+    background: #fadac6; 
+
+  }
+  body.darkMode .menuClose {
+    color: #000;
+  }
+  body.darkMode .nav-categorias ul li {
+    color: #000;
+  }
+  .nav-menu-background.active {
+    height: 100vw;
+  }
+
+  /*  */
+
+  .nav-container {
+    height: 20vw;
+    font-size: 4vw;
+    width: 100%;
+    padding: 0%;
+  }
+  .nav-logo {
+    height: 70%;
+  }
+  .nav-modoOscuro,
+  .nav-menu{
+    position: relative;
+    right:  10vw;
+  }
+  .nav-redes {
+    position: relative;
+    top: -25vw;
+    left: 40vw;
+    transition: all 0.6s ease;
+  } 
+  .nav-redes.active {
+    top: 85vw;
+  }
+  .nav-redes a i {
+    color: #000;
+  }
+  .carrito {
+    font-size: 4.5vw;
+    margin-right: 10vw;
+  }
+  .carrito-contador {
+    width: 4vw;
+    height: 4vw;
+    font-size: 3vw;
+  }
+  .carrito-container {
+    width: 60%;
+    font-size: 3vw;
+    font-weight: 600;
+    top: 20vw;
+    right: 5vw;
+  }
+  .carrito-vacio {
+    font-size: 2.6vw;
+  }
+  .carrito-producto img {
+    width: 15vw;
+    margin-right: 1px; 
+    margin-left: 1px;
+}
+.carrito-producto  i{
+  font-size: 5vw;
+}
+  .scroll-up {
+    font-size: 4vw;
+  }
+
+  .presentacion-container {
+    margin-top: 40vw;
+    flex-direction: column;
+  }
+  .presentacion-img {
+    order: -1;
+  }
+
+  .presentacion-texto h2 {
+    font-size: 7vw;
+    width: 100%;
+    text-align: center;
+  }
+  .presentacion-texto p {
+    font-size: 4vw;
+    margin-top: 8vw;
+    margin-bottom: 2vw;
+  }
+  .presentacion-texto img {
+    width: 16%;
+    top: 3vw;
+  }
+  .presentacion-img img {
+    width: 95vw;
+  }
+  .presentacion-texto a {
+    padding: 4vw;
+    font-size: 5vw;
+    top: 4vw;
+  }
+
+  .presentacion-seccionContainer {
+    width: 100%;
+  }
+  .presentacion-seccion {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    flex-direction: column;
+  }
+
+  .presentacion-seccionImg img {
+    width: 40vw;
+    margin-right: 0;
+  }
+
+  .presentacion-seccionTexto h3 {
+    font-size: 6vw;
+    width: 90%;
+  }
+
+  .presentacion-seccionContainer h1 {
+    font-size: 9vw;
+  }
+  .presentacion-seccionTexto p {
+    width: 100%;
+    font-size: 4vw;
+    margin-bottom: 2vw;
+  }
+
+  .card-container {
+    row-gap: 5vw;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .card {
+    width: 43vw;
+    height: 62vw;
+  }
+  .comida h3 {
+    font-size: 2.5vw;
+  }
+  .card-precio a i {
+    font-size: 2vw;
+    padding: 1vw;
+  }
+  .card-img {
+    width: 20vw;
+    height: 10vw;
+  }
+  .card-img img {
+    transform: scale(1.6);
+  }
+  .card:hover img {
+    transform: scale(1.8);
+  }
+  .card-texto {
+    width: 95%;
+    height: 10vw;
+    top: 3vw;
+  }
+  .card-texto h4 {
+    font-size: 3.5vw;
+  }
+  .card-texto p {
+    font-size: 3.2vw;
+    text-align: left;
+  }
+  .card-precio {
+    margin-top: 30vw;
+  }
+  .comida h3 {
+    font-size: 3.2vw;
+  }
+  .bebidas-container {
+    width: 90vw;
+  }
+  .bebidas-container img {
+    width: 30vw;
+  }
+  .onigiri-meme {
+    width: 30vw;
+    right: 0vw;
+    margin-bottom: 90vw;
+  }
+  .ramen-absolute {
+   display: none;
+  }
+  .sushi-absolute {
+   display: none;
+  }
+  .footer-container {
+    height: 90vw;
+    gap: 2vw;
+  }
+  .footer-duo {
+    display: flex;
+    gap: 2vw;
+    height: 70%;
+    flex-direction: column;
+  }
+  .footer-container a,
+  .footer-container li {
+    font-size: 4vw;
+  }
+  .footer-redes {
+    padding-top: 14vw;
+  }
+}
