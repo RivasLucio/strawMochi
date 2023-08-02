@@ -7,7 +7,6 @@ btnCarrito.addEventListener("click", (e) => {
 });
 
 document.addEventListener("click", (e) => {
-  const target = e.target;
   const isCarrito = target.closest(".carrito");
 
   if (!isCarrito) {
@@ -35,8 +34,6 @@ if (productosEnCarritoLS) {
 } else {
   productosEnCarrito = [];
 }
-
-// main.js
 
 // Función para cargar productos desde el archivo JSON
 function cargarProductos() {
@@ -250,7 +247,7 @@ btnMenu.addEventListener("click", (e) => {
   e.preventDefault();
   navMenuBackground.classList.toggle("active");
   navCategorias.classList.toggle("active");
-  navRedes.classList.toggle("active")
+  navRedes.classList.toggle("active");
   menu.classList.toggle("disabled");
   menuClose.classList.toggle("disabled");
 });
