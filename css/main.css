@@ -447,23 +447,159 @@ a {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.4);
 }
+.modal-close {
+  position: relative;
+  top: -4vw;
+  left: 15vw;
+  font-size: 2vw;
+  cursor: pointer;
+}
+
 .modal-content {
-  background-color: #fefefe;
-  margin: 15% auto;
+  background: hsla(23, 82%, 82%, 1);
+
+  background: linear-gradient(
+    315deg,
+    hsla(23, 82%, 82%, 1) 0%,
+    hsla(17, 80%, 79%, 1) 45%,
+    hsla(22, 83%, 76%, 1) 85%,
+    hsla(21, 78%, 75%, 1) 100%
+  );
+
+  background: -moz-linear-gradient(
+    315deg,
+    hsla(23, 82%, 82%, 1) 0%,
+    hsla(17, 80%, 79%, 1) 45%,
+    hsla(22, 83%, 76%, 1) 85%,
+    hsla(21, 78%, 75%, 1) 100%
+  );
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#F7C9AC", endColorstr="#F4B59D", GradientType=1 );
+  margin: 10% auto;
   padding: 3vw;
   border: 1px solid #888;
-  width: 50%;
-  height: 40%;
+  width: 35%;
+  height: 70%;
   text-align: center;
+  border-radius: 10%;
+}
+
+.form input {
+  width: 70%;
+  height: 2.5vw;
+  margin: auto;
+  border-radius: 10vw;
+  border: none;
+  margin-top: 1vw;
+  position: relative;
+  top: -2vw;
+  font-size: 1.3vw;
+  padding-left: 1vw;
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+}
+.form input::placeholder {
+  font-size: 1.3vw;
+  padding-left: 1vw;
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+}
+
+.form input:focus {
+  border: none;
 }
 .form {
   display: flex;
   flex-direction: column;
   margin-top: 5%;
 }
+.form img {
+  position: fixed;
+}
+.form .form-img-top {
+  width: 5vw;
+  top: 11vw;
+  left: 33vw;
+}
+.form .form-img-bottom {
+  width: 5vw;
+  bottom: 6vw;
+  right: 33vw;
+}
 
 .form button {
-  margin-top: 1.5vw;
+  width: 40%;
+  height: 3vw;
+  border-radius: 20vw;
+  margin: auto;
+  border: none;
+  font-family: "Playfair Display", serif;
+  font-size: 1.2vw;
+  font-weight: 800;
+  cursor: pointer;
+  margin-top: 3vw;
+}
+
+.modal-compra-container {
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.modal-compra-content {
+  background: hsla(23, 82%, 82%, 1);
+
+  background: linear-gradient(
+    315deg,
+    hsla(23, 82%, 82%, 1) 0%,
+    hsla(17, 80%, 79%, 1) 45%,
+    hsla(22, 83%, 76%, 1) 85%,
+    hsla(21, 78%, 75%, 1) 100%
+  );
+
+  background: -moz-linear-gradient(
+    315deg,
+    hsla(23, 82%, 82%, 1) 0%,
+    hsla(17, 80%, 79%, 1) 45%,
+    hsla(22, 83%, 76%, 1) 85%,
+    hsla(21, 78%, 75%, 1) 100%
+  );
+
+  background: -webkit-linear-gradient(
+    315deg,
+    hsla(23, 82%, 82%, 1) 0%,
+    hsla(17, 80%, 79%, 1) 45%,
+    hsla(22, 83%, 76%, 1) 85%,
+    hsla(21, 78%, 75%, 1) 100%
+  );
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#F7C9AC", endColorstr="#F4B59D", GradientType=1 );
+  margin: 10% auto;
+  border: 1px solid #888;
+  width: 35%;
+  height: 50%;
+  text-align: center;
+  border-radius: 10%;
+}
+
+.modal-compra-content h2 {
+  font-size: 1.5vw;
+  font-family: "Playfair Display", serif;
+}
+.modal-compra-content button {
+  width: 40%;
+  height: 3vw;
+  border-radius: 20vw;
+  margin: auto;
+  border: none;
+  font-family: "Playfair Display", serif;
+  font-size: 1.2vw;
+  font-weight: 800;
+  cursor: pointer;
+  margin-top: 1vw;
 }
 
 /* scroll bar */
@@ -558,6 +694,21 @@ body.darkMode .footer-container {
   .sushi-absolute {
     right: -10vw;
   }
+  .form .form-img-bottom {
+    bottom: 13vw;
+  }
+}
+@media (max-width: 1300px) {
+  .modal-content{
+    height: 40vw;
+  }
+  .form .form-img-top {
+    top: 15vw;
+  }
+  .form .form-img-bottom {
+    bottom: 0;
+    top:  20vw;
+  }
 }
 
 @media (max-width: 1200px) {
@@ -628,6 +779,23 @@ body.darkMode .footer-container {
   .footer-container a,
   .footer-container li {
     font-size: 1.5vw;
+  }
+}
+
+@media (max-width: 1000px) {
+  .modal-content {
+    width: 70%;
+    font-size: 1.7vw ;
+  }
+  .modal-close {
+    left: 30vw;
+    font-size: 3vw;
+  }
+  .form .form-img-top {
+    left: 17vw;
+  }
+  .form .form-img-bottom {
+    right: 17vw;
   }
 }
 
@@ -980,4 +1148,58 @@ body.darkMode .footer-container {
   .footer-redes {
     padding-top: 14vw;
   }
+  .modal-content {
+    height: 90vw;
+    width: 80%;
+    margin: 50% auto;
+    font-size: 2.5vw;
+  }
+  .modal-close {
+    left: 33vw;
+    top: -6vw;
+    font-size: 5vw;
+  }
+  .form  input{
+    width: 65%;    
+    height: 7vw;
+    font-size: 3vw;
+    margin-bottom: 3vw;
+  }
+  .form input::placeholder {
+    font-size: 3vw;
+  }
+  .form button {
+    width: 50%;
+    height: 6vw;
+    font-size: 3vw;
+  }
+  .form .form-img-top {
+    left: 12vw;
+    top: 55vw;
+    width: 13vw;
+  }
+  .form .form-img-bottom {
+    right: 12vw;
+    top: 70vw;
+    width: 13vw;
+  }
+  .modal-compra-content {
+    margin: 50% auto;
+    width: 80%;
+    height: 40%;
+  }
+  .modal-compra-content img {
+    width: 70vw;
+  }
+  .modal-compra-content h2 {
+    font-size: 4vw;
+  }
+  .modal-compra-content button {
+    font-size: 4vw;
+    width: 40%;
+    height: 7vw;
+    margin-top: 4vw;
+  }
+
+
 }

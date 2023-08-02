@@ -7,7 +7,7 @@ btnCarrito.addEventListener("click", (e) => {
 });
 
 document.addEventListener("click", (e) => {
-  const isCarrito = target.closest(".carrito");
+  const isCarrito = e.target.closest(".carrito");
 
   if (!isCarrito) {
     carritoContainer.classList.add("disabled");
@@ -180,13 +180,19 @@ function actualizarContadorCarrito() {
 
 //funcion para abrir modal
 
+const jsConfetti = new JSConfetti();
+
 function modal() {
   const abrirModal = document.querySelector(".solicitar-pedido");
   const modalContainer = document.querySelector(".modal-container");
   const finalizarPedido = document.querySelector("#finalizar-pedido");
+  const modalClose = document.querySelector(".modal-close");
 
   abrirModal.addEventListener("click", () => {
-    modalContainer.classList.toggle("disabled");
+    modalContainer.classList.remove("disabled");
+  });
+  modalClose.addEventListener("click", () => {
+    modalContainer.classList.add("disabled");
   });
   finalizarPedido.addEventListener("click", (e) => {
     const nombre = document.getElementById("nombre").value;
@@ -203,11 +209,23 @@ function modal() {
       );
       subirProductoEnCarrito();
       actualizarContadorCarrito();
-      modalContainer.classList.toggle("disabled");
+      modalContainer.classList.add("disabled");
+      modalCompraContainer.classList.remove("disabled");
+      jsConfetti.addConfetti({
+        
+        emojis: ['🍜', '🍣','🍙','🍚'],
+       
+        emojiSize: 60,
+     });
     }
   });
 }
 
+const cerrarModal = document.querySelector("#cerrar-modal");
+const modalCompraContainer = document.querySelector(".modal-compra-container");
+cerrarModal.addEventListener("click", () => {
+  modalCompraContainer.classList.add("disabled");
+});
 // mostrar scroll up
 const scrollUp = () => {
   const scrollUp = document.getElementById("scroll-up");

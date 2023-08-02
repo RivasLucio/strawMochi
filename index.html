@@ -12,6 +12,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Cookie&family=Libre+Baskerville&family=Permanent+Marker&family=Roboto:ital@1&display=swap"
         rel="stylesheet" />
+        <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
     <title>Strawmochi</title>
     <script defer src="./js/almacen.json"></script>
     <script defer src="./js/darkmode.js"></script>
@@ -116,21 +117,32 @@
                 </div>
             </div>
         </section>
+        <!-- modal de compra -->
         <div class="modal-container disabled">
             <div class="modal-content">
-                <h2>Completa los siguientes datos</h2>
+                <div class="modal-title">
+                    <h2>Completa los siguientes datos</h2>
+                    <i class="bi bi-x-circle modal-close"></i>
+                </div>
                 <form class="form">
-                    <label for="nombre">Nombre:</label>
-                    <input type="text" id="nombre" required>
-                    <label for="apellido">Apellido:</label>
-                    <input type="text" id="apellido" required>
-                    <label for="email">Correo electronico:</label>
-                    <input type="email" id="email" required>
-                    <label for="tel">Teléfono:</label>
-                    <input type="tel" id="tel" pattern="[0-9]+" required>
+                    <img class="form-img-top" src="./img/modal-compra.png" alt="">
+                    <img class="form-img-bottom" src="./img/modal-compra.png" alt="">
+                    
+                    <input type="text" id="nombre" required placeholder="Nombre">
+                    <input type="text" id="apellido" required placeholder="Apellido">
+                    <input type="email" id="email" required placeholder="Email">
+                    <input type="tel" id="tel" pattern="[0-9]+" required placeholder="Telefono">
                     <button id="finalizar-pedido">Realizar pedido!</button>
                 </form>
             </div>
+        </div>
+        <!-- modal post compra -->
+        <div class="modal-compra-container disabled">
+            <div class="modal-compra-content">
+                <img src="./img/modal-comprado.png" alt="">
+                <h2>Nos estaremos contactando contigo</h2>
+                <button id="cerrar-modal">Inicio</button>                
+            </div>            
         </div>
         <section class="sect" id="entrada">
             <div class="presentacion-seccionContainer comida">
